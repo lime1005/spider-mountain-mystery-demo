@@ -1,0 +1,34 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #07100f;
+}
+
+body,
+canvas,
+div {
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#GameDiv,
+#Cocos3dGameContainer,
+#GameCanvas {
+  width: 100%;
+  height: 100%;
+}
+
+#GameDiv {
+  position: fixed;
+  inset: 0;
+}
+
+#GameCanvas {
+  display: block;
+  background: #07100f;
+}
