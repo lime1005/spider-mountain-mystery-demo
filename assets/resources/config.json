@@ -1,0 +1,82 @@
+{
+    "importBase": "import",
+    "nativeBase": "native",
+    "name": "resources",
+    "deps": [],
+    "uuids": [
+        "0c70711be",
+        "31bd7228-4a71-471a-8014-171d273a27a1",
+        "31bd7228-4a71-471a-8014-171d273a27a1@6c48a",
+        "31bd7228-4a71-471a-8014-171d273a27a1@f9941",
+        "480e9d7b-001b-4fbc-98f8-cbab8ee2e465",
+        "480e9d7b-001b-4fbc-98f8-cbab8ee2e465@6c48a",
+        "480e9d7b-001b-4fbc-98f8-cbab8ee2e465@f9941",
+        "a6e27ae4-e12d-4de5-84df-0f2118cc7dd7",
+        "a6e27ae4-e12d-4de5-84df-0f2118cc7dd7@6c48a",
+        "a6e27ae4-e12d-4de5-84df-0f2118cc7dd7@f9941"
+    ],
+    "paths": {
+        "480e9d7b-001b-4fbc-98f8-cbab8ee2e465": [
+            "images/camp-background",
+            "cc.ImageAsset",
+            1
+        ],
+        "480e9d7b-001b-4fbc-98f8-cbab8ee2e465@6c48a": [
+            "images/camp-background/texture",
+            "cc.Texture2D",
+            1
+        ],
+        "480e9d7b-001b-4fbc-98f8-cbab8ee2e465@f9941": [
+            "images/camp-background/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "a6e27ae4-e12d-4de5-84df-0f2118cc7dd7": [
+            "images/misty-forest",
+            "cc.ImageAsset",
+            1
+        ],
+        "a6e27ae4-e12d-4de5-84df-0f2118cc7dd7@6c48a": [
+            "images/misty-forest/texture",
+            "cc.Texture2D",
+            1
+        ],
+        "a6e27ae4-e12d-4de5-84df-0f2118cc7dd7@f9941": [
+            "images/misty-forest/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "31bd7228-4a71-471a-8014-171d273a27a1": [
+            "images/characters/xiaoyue",
+            "cc.ImageAsset",
+            1
+        ],
+        "31bd7228-4a71-471a-8014-171d273a27a1@6c48a": [
+            "images/characters/xiaoyue/texture",
+            "cc.Texture2D",
+            1
+        ],
+        "31bd7228-4a71-471a-8014-171d273a27a1@f9941": [
+            "images/characters/xiaoyue/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ]
+    },
+    "scenes": {},
+    "packs": {
+        "0c70711be": [
+            "31bd7228-4a71-471a-8014-171d273a27a1@6c48a",
+            "480e9d7b-001b-4fbc-98f8-cbab8ee2e465@6c48a",
+            "a6e27ae4-e12d-4de5-84df-0f2118cc7dd7@6c48a"
+        ]
+    },
+    "versions": {
+        "import": [],
+        "native": []
+    },
+    "redirect": [],
+    "debug": true,
+    "extensionMap": {},
+    "hasPreloadScript": true,
+    "dependencyRelationships": {}
+}
