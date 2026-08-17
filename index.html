@@ -2,33 +2,42 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <title>蜘蛛山之夜</title>
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="full-screen" content="yes">
-    <meta name="screen-orientation" content="landscape">
-    <meta name="x5-fullscreen" content="true">
-    <meta name="360-fullscreen" content="true">
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>蜘蛛山之夜 - 试玩 Demo</title>
+    <style>
+      html, body { height: 100%; margin: 0; background: #071014; color: #eef1ed; }
+      body { display: grid; place-items: center; font-family: "Microsoft YaHei", sans-serif; }
+      main { text-align: center; }
+      h1 { margin: 0 0 16px; font-size: 34px; font-weight: 500; letter-spacing: 0; }
+      p { margin: 0; color: #a6b1ac; font-size: 15px; }
+    </style>
   </head>
   <body>
-    <div id="GameDiv" cc_exact_fit_screen="false">
-      <div id="Cocos3dGameContainer">
-        <canvas id="GameCanvas" width="1920" height="1080" tabindex="99"></canvas>
-      </div>
-    </div>
-
-    <script src="src/polyfills.bundle.js" charset="utf-8"></script>
-    <script src="src/system.bundle.js" charset="utf-8"></script>
-    <script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"></script>
+    <main>
+      <h1>蜘蛛山之夜</h1>
+      <p id="status">正在载入试玩 Demo...</p>
+    </main>
     <script>
-      System.import('./index.js').catch(function (error) {
-        console.error(error);
-      });
+      const status = document.getElementById('status');
+      const launch = () => location.replace('./app/index.html?build=trial-demo-0.1.0');
+
+      if (!('serviceWorker' in navigator)) {
+        status.textContent = '当前浏览器不支持试玩版所需功能，请使用最新版 Chrome 或 Edge。';
+      } else {
+        navigator.serviceWorker.register('./sw.js', { scope: './' })
+          .then(() => navigator.serviceWorker.ready)
+          .then(() => {
+            if (navigator.serviceWorker.controller) {
+              launch();
+              return;
+            }
+            navigator.serviceWorker.addEventListener('controllerchange', launch, { once: true });
+          })
+          .catch((error) => {
+            console.error(error);
+            status.textContent = '试玩 Demo 载入失败，请刷新页面重试。';
+          });
+      }
     </script>
   </body>
 </html>
